@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+     <!--alt shift seta pra baixo duplicar-->
+    <title>Custom</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+    
+        <nav class="nav nav-tabs">
+            <a href="#tab-1" class="nav-link" data-toggle="tab">Home</a>
+            <a href="#tab-2" class="nav-link" data-toggle="tab">Cursos</a>
+            <a href="#tab-3" class="nav-link" data-toggle="tab">Contato</a>
+            <a href="" class="nav-link" data-toggle="tab">Sobre nós</a>
+        </nav>
+        <div class="tab-content">
+            <div class="tab-pane" id="tab-1">
+                <h5>Conteúdo 1</h5>
+            </div>
+
+            <div class="tab-pane" id="tab-2">
+                <h5>Conteúdo 2</h5>
+            </div>
+
+            <div class="tab-pane" id="tab-3">
+                <h5>Conteúdo 3</h5>
+            </div>
+        </div>
+
+        <hr>
+        <nav class="nav nav-pills">
+            <a href="#aba-1" class="nav-link" data-toggle="tab">Home</a>
+            <a href="#aba-2" class="nav-link" data-toggle="tab">Cursos</a>
+            <a href="#aba-3" class="nav-link" data-toggle="tab">Contato</a>
+            <a href="" class="nav-link" data-toggle="tab">Sobre nós</a>
+        </nav>
+        <div class="tab-content">
+            <div class="tab-pane" id="aba-1">
+                <h5>Conteúdo 1</h5>
+            </div>
+
+            <div class="tab-pane" id="aba-2">
+                <h5>Conteúdo 2</h5>
+            </div>
+
+            <div class="tab-pane" id="aba-3">
+                <h5>Conteúdo 3</h5>
+            </div>
+        </div>
+        <hr>
+
+        <div class="row">
+            <div class="col-3">
+                <nav class="nav nav-pills">
+                    <a href="#aba2-1" class="nav-link" data-toggle="tab">Home</a>
+                    <a href="#aba2-2" class="nav-link" data-toggle="tab">Cursos</a>
+                    <a href="#aba2-3" class="nav-link" data-toggle="tab">Contato</a>
+                    <a href="" class="nav-link" data-toggle="tab">Sobre nós</a>
+                </nav>        
+            </div>
+
+            <div class="col-9">
+                <div class="tab-content">
+                    <div class="tab-pane" id="aba2-1">
+                        <h5>Conteúdo 1</h5>
+                    </div>
+        
+                    <div class="tab-pane" id="aba2-2">
+                        <h5>Conteúdo 2</h5>
+                    </div>
+        
+                    <div class="tab-pane" id="aba2-3">
+                        <h5>Conteúdo 3</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <button type="button" id="btn-1" class="btn btn-dark">aba Cursos</button>
+        <button type="button" id="btn-2" class="btn btn-dark">aba Cursos</button>
+        <button type="button" id="btn-3" class="btn btn-dark">aba Cursos</button>
+       
+        
+    </div>
+
+<script src="assets/js/jquery-3.5.0.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+      $(() => {
+        $('#btn-1').on('click', e => {
+            $('[href="#aba2-1"]').tab('show');
+        });
+
+        $('#btn-2').on('click', e => {
+            $('[href="#aba2-2"]').tab('show');
+        });
+
+        $('#btn-3').on('click', e => {
+            $('[href="#aba2-3"]').tab('show');
+        });
+      });
+
+      
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    
+    <title>Document</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="alert-success" role="alert">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem eum maiores distinctio ut necessitatibus a ullam dolore porro magni, nisi, quidem sint iure eligendi. Voluptatum, at aliquam. Tenetur, nisi nostrum!</p>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="alert alert-secondary">
+                Hello Word!
+            </div>
+            <div class="col">
+                <div class="alert alert-primary">
+                    Hello Word!
+            </div>    
+        </div>
+
+        <div class="row">
+            <div class="col-sm">
+                <div class="alert alert-danger">Perigo ERROR  404</div>
+            </div>
+            <div class="col-sm">
+                <div class="alert alert-warning">ALERTA ERRO!!</div>
+            </div>
+        </div>
+
+        <div class="alert-info">
+            Information, Acesse a
+            <a href="https://google.com">Google</a>
+        </div>
+
+        <div class="alert alert-dark">
+            <h4>Titulo</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet id aperiam expedita. Numquam fugit voluptatum eum eaque aliquid saepe architecto deserunt ullam magnam libero! Placeat aliquid mollitia sunt tenetur accusamus.</p> 
+            <hr>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet id aperiam expedita. Numquam fugit voluptatum eum eaque aliquid saepe architecto deserunt ullam magnam libero! Placeat aliquid mollitia sunt tenetur accusamus.</p>   
+        </div>
+        
+        <div class=" .alert.alert-success.alert-dismissible fade show">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est ea saepe necessitatibus repellat libero magnam vel quibusdam. Inventore repudiandae eaque autem dolorem iste officiis nostrum quo, provident sapiente a eum?
+            
+            <button class="close"
+             data-dismiss="alert"
+             aria-label="close">
+             <span aria-hidden="true">&times;</span>
+            </button>
+        </div> 
+        
+        <button id="btn-close-all" type="button">Fechar alerta</button>
+    
+    </div>
+    
+    <script src="assets/js/jquery-3.5.0.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        $(() => {
+            $('#btn-close-all').on('click', e => {
+                $('.alert').alert('close');
+            });
+        });
+    </script>
+    
+</body>
+</html>

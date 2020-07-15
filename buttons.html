@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+     <!--alt shift seta pra baixo duplicar-->
+    <title>Document</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+
+    <div class="container">
+       <div class="row">
+           <div class="col">
+               <button class="btn btn-primary">Ok</button>
+               <button class="btn btn-secondary">Ok</button>
+               <button class="btn btn-success">Ok</button>
+               <button class="btn btn-warning">Ok</button>
+               <button class="btn btn-danger">Ok</button>
+               <button class="btn btn-info">Ok</button>
+               <button class="btn btn-light">Ok</button>
+               <button class="btn btn-link">Ok</button>
+           </div>
+       </div>
+
+       <div class="row">
+           <div class="col">
+               <input type="button" class="btn btn-primary" value="Ok">
+
+               <a href="" class="btn- btn-primary">Ok</a>
+               <button class="btn btn-primary">OK</button>
+           </div>
+       </div>
+       <div class="row">
+           <div class="col">
+               <button class="button btn btn-outline-primary">Enviar</button>
+               <button class="button btn btn-outline-warning">Enviar</button>
+           </div>
+       </div>
+        <div class="row">
+           <div class="col">
+               <button class="btn btn-success btn-lg">Enviar</button>
+               <button class="btn btn-danger btn-sm">Login</button>
+            </div>       
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-primary btn-block">Login</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <a href="" class="btn btn-primary active btn-block" aria-pressed="true">Login</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-primary btn-block" disabled>Login</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-success" id="btn-auto-save" data-toogle="button">Mandar</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="btn-group btn-group-toggle"
+                data-toogle="buttons">
+
+                <label for="option" class="btn btn-secondary active">
+                    <input type="radio" name="options" id="option1" checked>Enviar
+                </label>
+
+                <label for="option" class="btn btn-secondary">
+                    <input type="radio" name="options" id="option2">Enviar
+                </label>
+
+                <label for="option" class="btn btn-secondary">
+                    <input type="radio" name="options" id="option3">Enviar
+                </label>
+
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-primary" id="btn-click">Ativa desativa auto save</button>
+    
+    </div>
+    
+    <script src="assets/js/jquery-3.5.0.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        $(() => {
+           $('#btn-click').on('click', e =>{
+                $('btn-auto-save').button('toggle');
+           });
+
+        });
+    </script>
+    
+</body>
+</html>

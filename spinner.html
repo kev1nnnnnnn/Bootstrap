@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+     <!--alt shift seta pra baixo duplicar-->
+    <title>scrolspy</title>
+    <style>
+       #scrollspy-content {
+           position: relative;
+           height: calc(100vh - 120px);
+           overflow-y: auto;
+           scroll-behavior: smooth;
+       }
+    </style>
+</head>
+<body>
+    <div class="container">
+       <div class="spinner-border">
+           <div class="sr-only">carregando...</div>
+       </div>
+       <hr>
+       <div class="spinner-border text-primary">
+            <div class="sr-only">carregando...</div>
+        </div>
+        <hr>
+        <div class="spinner-grow text-warning">
+            <div class="sr-only">carregando...</div>
+        </div>
+
+        <div class="dflex justify-content align-items-center" style="height: 25vh;">
+            <div class="spinner-grow text-success">
+                <div class="sr-only">Carregando</div>
+            </div>
+        </div>
+
+        <div class="dflex justify-content-center">
+            <div class="spinner-border spinner-border-sm text-success">
+                <div class="sr-only">Carregando</div>
+            </div>
+        </div>
+        <hr>
+        
+        <button class="btn btn-primary" disabled>
+            <div class="spinner-border spinner-border-lg ml-auto"></div>
+            <div class="sr-only">Carregando</div>
+        </button>
+
+    </div>
+
+
+<script src="assets/js/jquery-3.5.0.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+     
+    </script>
+    
+</body>
+</html>

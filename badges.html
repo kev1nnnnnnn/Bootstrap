@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+     <!--alt shift seta pra baixo duplicar-->
+    <title>Document</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+
+    <h1>Hcode Treinamentos <span class="badge badge-success">New</span></h1>
+    <h2>Hcode Treinamentos <span class="badge badge-success">New</span></h2>
+    <hr>
+    <button id="btn-click" type="button" class="btn btn-primary">Click <span class="badge badge-light">0</span></button>
+
+    <button type="button" class="btn btn-primary">
+        Caixa de Entrada <span class="badge badge-light">5</span>
+        <span class="sr-only">Há cinco mensagens não lidas</span>
+    </button>
+
+    <hr>
+
+    <span class="badge badge-primary">1</span>
+    <span class="badge badge-secundary">2</span>
+    <span class="badge badge-danger">3</span>
+    <span class="badge badge-success">4</span>
+    <span class="badge badge-light">5</span>
+    <span class="badge badge-warning">6</span>
+    <span class="badge badge-info">7</span>
+    <span class="badge badge-dark">8</span>
+
+    <hr>
+    <span class="badge badge-primary badge-pill">Ok</span>
+    <hr>
+    <a href="" class="badge badge-success">mandar</a>
+
+
+    <script src="assets/js/jquery-3.5.0.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        $(() => {
+           $('#btn-click').on('click', e =>{
+
+            const valor = parseInt($(e.target).find('.badge').text());
+
+            $(e.target).find('.badge').text(valor + 1);
+           });
+
+        });
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+     <!--alt shift seta pra baixo duplicar-->
+    <title>Custom</title>
+    <style>
+       .progress-bar {
+          
+       }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="progress">
+            <div class="progress-bar" role="progressbar">
+
+            </div>
+        </div>
+        <hr>
+        <div class="progress">
+            <div class="progress-bar bg-danger" role="progressbar" style="width: 10%;">
+            </div>
+        </div>
+
+        <hr>
+        <div class="progress">
+            <div class="progress-bar bg-danger" role="progressbar" style="width: 10%;"> 25%
+            </div>
+        </div>
+        <hr>
+        <div class="progress" style="height: 100px;">
+            <div class="progress-bar bg-danger" role="progressbar" style=" width: 10%;"> 25%
+            </div>
+        </div>
+        <hr>
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 10%;"> 25%
+            </div>
+        </div>
+        <hr>
+        <div class="progress">
+            <div class="progress-bar w-25 progress-bar-striped bg-danger progress-bar-animated" role="progressbar"> 25%
+            </div>
+        </div>
+        <hr>
+       
+
+
+
+
+    </div>
+
+
+<script src="assets/js/jquery-3.5.0.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+     $(() => {
+        window.progressInterval = setInterval(() => {
+
+            //valor atual
+            let progress = $('#progress .progress-bar').css('width')
+            .replace('%', ''); //removendo a %
+
+            progress = parseInt(progress) + 1;
+            
+            if (progress >= 100) {
+                clearInterval(progressInterval);
+            }
+
+            $('#progress .progress-bar').css('width', progress + '%');
+        })
+     }), 1000;
+    </script>
+    
+</body>
+</html>

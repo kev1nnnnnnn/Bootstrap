@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+     <!--alt shift seta pra baixo duplicar-->
+    <title>Form Validation</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <form novalidate class="needs-validation" action="">
+
+            <div class="form-row">
+                <div class="col form-group">
+                    <label for="first">Primeiro Nome</label>
+                    <input type="text" name="" id="first" class="form-control is-valid" required>
+                    <div class="valid-tooltip">
+                        Tudo certo!
+                    </div>
+                </div>
+
+                <div class="col form-group">
+                    <label for="last">último Nome</label>
+                    <input type="text" name="" id="last" class="form-control is-invalid" required>
+                    <div class="valid-tooltip">OK</div>
+                </div>
+            </div>
+            <hr>
+
+            <div class="form-row">
+                <div class="col-sm-3 for-group">
+                    <label for="zipcode">CEP</label>
+                    <input type="text" id="zipcode" class="form-control">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="col-sm-9 form-group">
+                    <label for="adress">Endereço</label>
+                    <input type="text" name="" id="adress" class="form-control">
+                </div>
+
+                <div class="col-sm-3 form-group">
+                    <label for="number">Número</label>
+                    <input type="number" name="" id="adress" class="form-control">
+                </div>
+            </div>
+
+
+            <div class="form-row">
+                <div class="col-sm-6 form-group">
+                    <label for="complement">Complemento</label>
+                    <input type="text" name="" id="complement" class="form-control">
+                </div>
+
+                <div class="col-sm-6 form-group">
+                    <label for="district">Bairro</label>
+                    <input type="text" name="" id="district" class="form-control">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="col-sm-4">
+                    <label for="complement">Cidade</label>
+                    <input type="text" name="" id="complement" class="form-control">
+                </div>
+
+                <div class="col-6 col-sm-4">
+                    <label for="district">Estado</label>
+                    <input type="text" name="" id="district" class="form-control">
+                </div>
+
+                <div class="col-6 col-sm-4">
+                    <label for="district">País</label>
+                    <input type="text" name="" id="district" class="form-control">
+                </div>
+            
+            </div>
+<hr>
+            <div class="form-row">
+                <button type="submit" class="btn btn-primary btn-block">Salvar</button>
+            </div>
+
+        </form>
+    </div>
+
+<script src="assets/js/jquery-3.5.0.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        /*
+       $(() =>{
+    
+        $('form').on('submit', e => {
+            const form = e.target;
+
+            if(e.target.checkValidity() === false) {
+
+                e.preventDefault();
+                e.stopPropagation();
+            }
+
+            $(form).addClass('was-validated');
+        });
+       });*/
+
+       window.addEventListener('load', e => {
+           const form = document.querySelector('form');
+
+           form.addEventListener('submit', eventoSubmit =>  {
+               if(form.checkValidity() === false) {
+
+                   e.preventDefault();
+                   e.stopPropagation();
+               }
+
+               form.classList.add('was-validated');
+           });
+       });
+    </script>
+    
+</body>
+</html>

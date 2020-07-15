@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+     <!--alt shift seta pra baixo duplicar-->
+    <title>Custom</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="btn btn-primary btn-lg"
+         data-toggle="popover" data-content="Conteúdo do popover">
+         Mostrar Popovers
+        </button>
+        <hr>
+        <button class="btn btn-primary btn-lg"
+         data-toggle="popover" title="title do popover" data-content="Conteúdo do popover">
+         Mostrar Popovers
+        </button>
+        <hr>
+        <button class="btn btn-primary btn-lg"
+         data-toggle="popover" title="title do popover" data-content="Conteúdo do popover" data-placement="left">
+          Mostrar Popovers
+        </button>
+        <hr>
+        <button class="btn btn-primary btn-lg"
+        data-toggle="popover" title="title do popover" data-content="Conteúdo do popover" data-placement="bottom">
+         Mostrar Popovers
+       </button>
+       <hr>
+       <button class="btn btn-primary btn-lg"
+       data-toggle="popover" title="title do popover" data-content="Conteúdo do popover" data-placement="left" data-trigger="focus">
+        Mostrar Popovers
+      </button>
+      <hr>
+      <button class="btn btn-primary btn-lg"
+       data-toggle="popover" title="title do popover" data-content="Conteúdo do popover" data-placement="left" data-trigger="hover">
+        Mostrar Popovers
+      </button>
+      <hr>
+      <button type="button" class="btn btn-danger btn-lg" id="btn-click" data-toggle="popver" title="Titulo do Pop" data-content="Conteúdo do popOver">
+          Abrir PopOvers
+      </button>
+    </div>
+
+
+<script src="assets/js/jquery-3.5.0.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+     $(() =>{
+        $('[data-toggle="popover"]').popover();
+        //Ativar o click
+        $('#btn-click').on('click', e => {
+            $('[data-toggle="popover"]').popover('toggle');
+        })
+            })
+      
+    </script>
+    
+</body>
+</html>

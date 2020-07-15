@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+     <!--alt shift seta pra baixo duplicar-->
+    <title>Custom</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="custom-control custom-switch">
+            <input type="checkbox" name="gender" id="switch" class="custom-control-input" >
+            <label for="switch" class="custom-control-label">Manter conectado</label>
+        </div>
+
+        </form>
+    </div>
+
+<script src="assets/js/jquery-3.5.0.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        /*
+       $(() =>{
+    
+        $('form').on('submit', e => {
+            const form = e.target;
+
+            if(e.target.checkValidity() === false) {
+
+                e.preventDefault();
+                e.stopPropagation();
+            }
+
+            $(form).addClass('was-validated');
+        });
+       });*/
+
+       window.addEventListener('load', e => {
+           const form = document.querySelector('form');
+
+           form.addEventListener('submit', eventoSubmit =>  {
+               if(form.checkValidity() === false) {
+
+                   e.preventDefault();
+                   e.stopPropagation();
+               }
+
+               form.classList.add('was-validated');
+           });
+       });
+    </script>
+    
+</body>
+</html>

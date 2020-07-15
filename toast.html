@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+     <!--alt shift seta pra baixo duplicar-->
+    <title>Toast</title>
+    
+</head>
+<body>
+    <div class="container">
+      <div class="toast">
+          <div class="toast-header">
+              <strong class="strong mr-auto">Notification</strong>
+                <small>Agora</small>
+                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="toast-body">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At, dicta perferendis aspernatur alias temporibus reiciendis reprehenderit explicabo quos, earum similique excepturi aut libero veritatis quidem rem laborum iure soluta dolore.</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At, dicta perferendis aspernatur alias temporibus reiciendis reprehenderit explicabo quos, earum similique excepturi aut libero veritatis quidem rem laborum iure soluta dolore.</p>
+            </div>
+      </div>
+
+    </div>
+
+
+<script src="assets/js/jquery-3.5.0.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+     $(() => {
+         $('.toast').toast({
+             delay: 5000,
+             autohide: true,
+             animation: false
+         }).toast('show');
+         
+     })
+    </script>
+    
+</body>
+</html>
